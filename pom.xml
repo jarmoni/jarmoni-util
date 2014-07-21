@@ -11,7 +11,7 @@
 	<packaging>jar</packaging>
 
 	<name>${project.artifactId}</name>
-	<description>Some utilities. Hope they may redundant in future</description>
+	<description>Some utilities. Hope they'll be redundant in future</description>
 	
 	<!-- url and scm should be inherited but are required due to https://jira.codehaus.org/browse/SCM-531 -->
 	<url>https://github.com/jarmoni/${project.artifactId}</url>
@@ -46,30 +46,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<profiles>
-		<profile>
-			<id>release-sign-artifacts</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>${maven.gpg.plugin.version}</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 
 	<dependencies>
 		<dependency>

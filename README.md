@@ -1,0 +1,1 @@
+Some utilities. Hope they'll be redundant in future
